@@ -1,21 +1,18 @@
-/* .header__link {
-  text-decoration: none;
-  font-family: "Poppins", "Roboto", sans-serif;
-  font-weight: 900;
-  font-size: 1.5rem;
-  display: inline-block;
-  color: #707070;
-} */
+.header {
+  /* background: red; */
+  padding: 10px 25px;
+}
 .header__link {
   text-decoration: none;
-  font-family: "Poppins", "Roboto", sans-serif;
-  font-weight: 900;
-  font-size: 1.5rem;
-  color: #707070;
-  margin-left: 120px;
+  font-family: "Poppins", "roboto", sans-serif;
+  font-weight: 800;
+  color: black;
+  opacity: 0.5;
+  font-size: 1rem;
 }
-@media (max-width: 556px) {
+@media (min-width: 992px) {
   .header__link {
-    margin: 10px;
+    font-size: 1.5rem;
+    margin-left: 115px;
   }
 }
