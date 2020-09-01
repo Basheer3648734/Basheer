@@ -5,19 +5,9 @@ import Head from "next/head";
 import SocialBtns from "../components/SocialBtn";
 import styles from "./index.module.css";
 import Typed from "typed.js";
-import { TimelineLite } from "gsap";
-// import "gsap";
-// import CSSPlugin from "gsap/CSSPlugin";
 
-// const myPlugins = [CSSPlugin]; //<-- HARD REFERENCE IN YOUR CODE
 export default function Home() {
   const el = useRef(null);
-  let line1 = useRef(null);
-  let line2 = useRef(null);
-  let line3 = useRef(null);
-  let actionButton = useRef(null);
-  let homeRight = useRef(null);
-  const tl = new TimelineLite();
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: ["Basheer."],
@@ -28,15 +18,6 @@ export default function Home() {
       startDelay: 100,
       loop: true,
     });
-    tl.from(homeRight, 0.8, { opacity: 0, x: 50 })
-      .staggerFrom([line1, line2, line3], 1, {
-        opacity: 0,
-        y: 100,
-      })
-      .to(actionButton, 0.8, {
-        visibility: "visible",
-        delay: -0.3,
-      });
   }, []);
   return (
     <>
@@ -63,26 +44,17 @@ export default function Home() {
       <main className={styles.home}>
         <SocialBtns />
         <div className={styles.home__left}>
-          <div className={styles.home__line}>
-            <h4 ref={(el) => (line1 = el)}>Hola,</h4>
-          </div>
-          <div className={styles.home__line}>
-            <h1 ref={(el) => (line2 = el)}>
-              This is{"   "}
-              <span
-                className={styles.home__leftName}
-                id="hero_name"
-                ref={el}
-              ></span>
-            </h1>
-          </div>
-          <div className={styles.home__line}>
-            <p ref={(el) => (line3 = el)}>
-              I am a full stack javascript developer
-            </p>
-          </div>
+          <h4>Hola,</h4>
+          <h1>
+            This is{"   "}
+            <span
+              className={styles.home__leftName}
+              id="hero_name"
+              ref={el}
+            ></span>
+          </h1>
+          <p>I am a full stack javascript developer</p>
           <a
-            ref={(el) => (actionButton = el)}
             href="mailto:cleverbasheer@gmail.com"
             className={styles.home__leftChatBtn}
           >
@@ -90,11 +62,7 @@ export default function Home() {
           </a>
         </div>
         <div className={styles.home__right}>
-          <img
-            ref={(el) => (homeRight = el)}
-            src="/images/Programming-rafiki.webp"
-            alt="programming svg "
-          />
+          <img src="/images/Programming-rafiki.webp" alt="programming svg " />
         </div>
       </main>
     </>
