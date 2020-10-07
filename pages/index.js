@@ -6,6 +6,10 @@ import SocialBtns from "../components/SocialBtn";
 import styles from "./index.module.css";
 import Typed from "typed.js";
 import { TimelineLite } from "gsap";
+// import "gsap";
+// import CSSPlugin from "gsap/CSSPlugin";
+
+// const myPlugins = [CSSPlugin]; //<-- HARD REFERENCE IN YOUR CODE
 export default function Home() {
   const el = useRef(null);
   let line1 = useRef(null);
@@ -29,7 +33,10 @@ export default function Home() {
         opacity: 0,
         y: 100,
       })
-      .to(actionButton, 0.8, { visibility: "visible", delay: -0.5 });
+      .to(actionButton, 0.8, {
+        visibility: "visible",
+        delay: -0.3,
+      });
   }, []);
   return (
     <>
@@ -56,14 +63,10 @@ export default function Home() {
       <main className={styles.home}>
         <SocialBtns />
         <div className={styles.home__left}>
-          <div
-            className={[styles.home__line, styles.home__lineFirst].join(" ")}
-          >
+          <div className={styles.home__line}>
             <h4 ref={(el) => (line1 = el)}>Hola,</h4>
           </div>
-          <div
-            className={[styles.home__line, styles.home__lineSecond].join(" ")}
-          >
+          <div className={styles.home__line}>
             <h1 ref={(el) => (line2 = el)}>
               This is{"   "}
               <span
@@ -73,10 +76,8 @@ export default function Home() {
               ></span>
             </h1>
           </div>
-          <div
-            className={[styles.home__line, styles.home__lineThird].join(" ")}
-          >
-            <p ref={(ele) => (line3 = ele)}>
+          <div className={styles.home__line}>
+            <p ref={(el) => (line3 = el)}>
               I am a full stack javascript developer
             </p>
           </div>
@@ -88,8 +89,12 @@ export default function Home() {
             let's chat
           </a>
         </div>
-        <div className={styles.home__right} ref={(el) => (homeRight = el)}>
-          <img src="/images/Programming-rafiki.webp" alt="programming svg " />
+        <div className={styles.home__right}>
+          <img
+            ref={(el) => (homeRight = el)}
+            src="/images/Programming-rafiki.webp"
+            alt="programming svg "
+          />
         </div>
       </main>
     </>
