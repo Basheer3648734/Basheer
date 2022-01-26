@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import NavBar from "../components/NavBar";
 import Head from "next/head";
 import Link from "next/link";
@@ -28,13 +28,18 @@ export default function App() {
       <div className="home">
         <Layout>
           <NavBar page="home" />
-          <section className="flex flex-col-reverse  items-center justify-start sm:justify-between h-[100%] md:h-[60vh] sm:flex-row">
-            <div className="mt-[20px] p-[30px] sm:w-[50%] md:w-[60%]">
-              <h2 className="font-bold text-[1.5rem]">Hello 👋</h2>
-              <h2 className="font-bold text-[2rem]">This is Basheer</h2>
-              <p className="leading-6 mt-2">
-                I am an undergrad and software engineer.I like to create
-                sustainable and efficient softwares that solves human problems
+          <section className="flex flex-col-reverse  items-center justify-center sm:justify-between h-[80%] md:h-[60vh] sm:flex-row">
+            <div className="mt-[20px] p-[30px] sm:p-[20px] md:p-[0px] w-[100%] sm:w-[50%] md:w-[60%] mx-auto">
+              <h2 className="font-bold text-[1.5rem] md:text-[2rem]">
+                Hello 👋
+              </h2>
+              <h2 className="font-bold text-[2rem] md:text-[2.5rem]">
+                This is Basheer
+              </h2>
+              <p className="text-justify leading-6 mt-2 md:text-[1rem]">
+                I am an undergrad and software engineer. I like to create
+                sustainable and efficient softwares that solves human problems.
+                Apart from that I am an occasional blogger.
               </p>
               <Link href="maito:bk3648734@gmail.com">
                 <a className="inline-block bg-cyan w-[100%] hover:underline  hover:decoration-solid sm:w-auto mt-[1.5rem] px-[15px] py-[10px] text-center text-[1.2rem]">
@@ -45,10 +50,11 @@ export default function App() {
             <div className="sm:w-[50%] md:w-[40%] flex justify-center items-center">
               <Image
                 priority
-                src="/images/hero_pic.jpg"
+                src="/images/hero_pic.webp"
                 width="200px"
                 height="200px"
                 className="rounded-full hover:grayscale md:w-[300px]"
+                alt="image of basheer"
               />
             </div>
           </section>

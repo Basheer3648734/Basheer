@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import NavBar from "../components/NavBar";
 import Head from "next/head";
 export default function about() {
@@ -10,10 +10,10 @@ export default function about() {
       <Layout>
         <NavBar page="about" />
         <section className="flex px-[30px] align-center h-[100%] flex-col">
-          <h1 className="text-center font-bold text-[2rem]  p-[10px]">
-            About Me
-          </h1>
-          <p className="indent-10 text-justify leading-7 mb-[20px] selection:bg-[#f0abfc] selection:text-[#701a75]">
+          <div className=" font-bold text-[2rem]  p-[10px] mb-[10px] flex justify-center">
+            <h1 className="all_device_highlighter">About Me 😊</h1>
+          </div>
+          <p className="indent-10 text-justify leading-7 mb-[20px] selection:bg-[#f0abfc] selection:text-[#701a75] text-[0.9rem] sm:text-[1rem]">
             Hey, I am Basheer. I am an undergrad at CMR college of Engineering
             and Technology and software engineer intern. I like to build
             software applications that aims at solving a particular solution.
@@ -27,7 +27,7 @@ export default function about() {
           <h2 className="text-[1.5rem] underline decoration-solid text-[#0891b2] font-bold mb-[5px] md:mt-[20px] lg:text-center">
             My 2022 Resolutions
           </h2>
-          <ul className="list-disc leading-7 mx-auto w-[90%] md:w-[60%] lg:w-[70%]">
+          <ul className="list-disc leading-7 mx-auto w-[90%]  lg:w-[50%]">
             <li>Excel at technical skills</li>
             <li>To improve as a human being</li>
           </ul>
