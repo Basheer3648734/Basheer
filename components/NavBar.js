@@ -6,16 +6,20 @@ export default function NavBar(props) {
 
   return (
     <div
-      className={` top-0 left-0  w-[100vw] sm:overflow-hidden sm:w-[100%] z-[10] ${
+      className={` top-0 left-0  w-[100vw] sm:overflow-hidden sm:w-[100%] z-[10] sm:z-[0] sm:bg-transparent sm:static sm:h-[auto] ${
         isNavbarModalOpen ? "h-[100vh] bg-[black] absolute" : ""
       }`}
     >
       <header
-        className={` w-[100%]  flex flex-row flex-wrap flex-1  justify-between items-center px-[20px] py-[10px] sm:p-[20px] sm:px-[0px] ${
+        className={` w-[100%]  flex flex-row flex-wrap flex-1  justify-between items-center px-[20px] py-[10px] sm:p-[20px] sm:px-[0px] sm:bg-[transparent] ${
           isNavbarModalOpen ? "bg-[black]" : ""
         } sm:z-[10] `}
       >
-        <div className={`${isNavbarModalOpen ? "text-[white] z-[20]" : ""}`}>
+        <div
+          className={`sm:text-[black] ${
+            isNavbarModalOpen ? "text-[white] z-[20]" : ""
+          }`}
+        >
           <Header />
         </div>
         <button

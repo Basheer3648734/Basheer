@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import NavBar from "../components/NavBar";
 export default function projects() {
   return (
