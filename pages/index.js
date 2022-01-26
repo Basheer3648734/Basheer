@@ -1,9 +1,9 @@
-// import Layout from "../components/layout";
-
+import Layout from "../components/layout";
+import NavBar from "../components/NavBar";
 import Head from "next/head";
-import Home from '../components/Home/Home'
+import Link from "next/link";
+import Image from "next/image";
 export default function App() {
-  
   return (
     <>
       <Head>
@@ -25,7 +25,35 @@ export default function App() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="agektmr" />
       </Head>
-     <Home/>
+      <div className="home">
+        <Layout>
+          <NavBar page="home" />
+          <section className="flex flex-col-reverse  items-center justify-start sm:justify-between h-[100%] md:h-[60vh] sm:flex-row">
+            <div className="mt-[20px] p-[30px] sm:w-[50%] md:w-[60%]">
+              <h2 className="font-bold text-[1.5rem]">Hello 👋</h2>
+              <h2 className="font-bold text-[2rem]">This is Basheer</h2>
+              <p className="leading-6 mt-2">
+                I am an undergrad and software engineer.I like to create
+                sustainable and efficient softwares that solves human problems
+              </p>
+              <Link href="maito:bk3648734@gmail.com">
+                <a className="inline-block bg-cyan w-[100%] hover:underline  hover:decoration-solid sm:w-auto mt-[1.5rem] px-[15px] py-[10px] text-center text-[1.2rem]">
+                  Get in touch
+                </a>
+              </Link>
+            </div>
+            <div className="sm:w-[50%] md:w-[40%] flex justify-center items-center">
+              <Image
+                priority
+                src="/images/hero_pic.jpg"
+                width="200px"
+                height="200px"
+                className="rounded-full hover:grayscale md:w-[300px]"
+              />
+            </div>
+          </section>
+        </Layout>
+      </div>
     </>
   );
 }
