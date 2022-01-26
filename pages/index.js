@@ -28,7 +28,7 @@ export default function App() {
       <div className="home">
         <Layout>
           <NavBar page="home" />
-          <section className="flex flex-col-reverse  items-center justify-start sm:justify-between h-[100%] md:h-[60vh] sm:flex-row">
+          <section className="flex flex-col-reverse  items-center justify-center sm:justify-between h-[80%] md:h-[60vh] sm:flex-row">
             <div className="mt-[20px] p-[30px] sm:w-[50%] md:w-[60%]">
               <h2 className="font-bold text-[1.5rem]">Hello 👋</h2>
               <h2 className="font-bold text-[2rem]">This is Basheer</h2>
