@@ -49,6 +49,7 @@ export default function App() {
                 width="200px"
                 height="200px"
                 className="rounded-full hover:grayscale md:w-[300px]"
+                alt="image of basheer"
               />
             </div>
           </section>
