@@ -2,7 +2,9 @@
   {
     "name": "Book Marker",
     "id": "bookmarker",
-    "image": "/images/bookmarker.png",
+
+    "image": "/images/bookmarker.webp",
+
     "createdAt": "03/01/2021",
     "stage": "production",
     "description": "Bookmarker is a web application that is used by many enthusiast reader to bookmark their last read app. It was developed using react and other famous technologies.",
@@ -26,7 +28,9 @@
   {
     "name": "Covid CLI",
     "id": "covidCLI",
-    "image": "/images/covid_cli.png",
+
+    "image": "/images/covid_cli.webp",
+
     "createdAt": "08/06/2020",
     "stage": "production",
     "description": "Covid CLI is an command line interface application. It was developed during the bad periods of covid-19. It basically gives you the information about the covid cases in India",
@@ -50,7 +54,9 @@
   {
     "name": "OctoProfile",
     "id": "octoProfile",
-    "image": "/images/octoprofile.png",
+
+    "image": "/images/octoprofile.webp",
+
     "createdAt": "27/12/2020",
     "stage": "production",
     "description": "OctoProfile is a full stack application that uses github API to fetch the user data upon entering the username. It present the information about the repositories, starks, forks, popular language of that particular user.",
@@ -70,7 +76,9 @@
   {
     "name": "Save Earth",
     "id": "saveEarth",
-    "image": "/images/save_earth.png",
+
+    "image": "/images/save_earth.webp",
+
     "createdAt": "16/10/2020",
     "stage": "development",
     "description": "Save Earth is a full stack web application. The intention behind the creation of this web application was to allow the human being get statistics about the Earth's health. It allows provides a way to allow the user take Oath",
@@ -94,7 +102,9 @@
   {
     "name": "Google Clone",
     "id": "googleClone",
-    "image": "/images/google_clone.png",
+
+    "image": "/images/google_clone.webp",
+
     "createdAt": "27/08/2020",
     "stage": "production",
     "description": "Google clone as the name indicates is clone of the famous search engine giant. It was build using the google's search API. It uses materialUI. The design of the application is inpired from the internet giant.",
@@ -114,7 +124,9 @@
   {
     "name": "ExpTrack",
     "id": "expTrack",
-    "image": "/images/expTrack.png",
+
+    "image": "/images/expTrack.webp",
+
     "stage": "development",
     "createdAt": "In development",
     "description": "ExpTrack is an expense tracker application. In this world where we tend to spend more money then needed. This web application allows you to keep track of your expenses and not only that it mails you monthly PDF report of the expenses of that particular month.",
