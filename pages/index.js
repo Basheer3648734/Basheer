@@ -41,7 +41,7 @@ export default function App() {
                 sustainable and efficient softwares that solves human problems.
                 Apart from that I am an occasional blogger.
               </p>
-              <Link href="maito:bk3648734@gmail.com">
+              <Link href="mailto:bk3648734@gmail.com">
                 <a className="inline-block bg-cyan w-[100%] hover:underline  hover:decoration-solid sm:w-auto mt-[1.5rem] px-[15px] py-[10px] text-center text-[1.2rem]">
                   Get in touch
                 </a>

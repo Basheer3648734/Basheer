@@ -11,7 +11,7 @@ export default function about() {
         <NavBar page="about" />
         <section className="flex px-[30px] align-center h-[100%] flex-col">
           <div className=" font-bold text-[2rem]  p-[10px] mb-[10px] flex justify-center">
-            <h1 className="all_device_highlighter">About Me 😊</h1>
+            <h1 className="about_us_highlighter">About Me 😊</h1>
           </div>
           <p className="indent-10 text-justify leading-7 mb-[20px] selection:bg-[#f0abfc] selection:text-[#701a75] text-[0.9rem] sm:text-[1rem]">
             Hey, I am Basheer. I am an undergrad at CMR college of Engineering

@@ -10,6 +10,8 @@ module.exports = {
       current: "currentColor",
       brand: "#9AE8F2",
       cyan: "#5ADEDE",
+      sky: "#87ceeb",
+      warning: "#FFCCCC",
     },
     extend: {},
   },

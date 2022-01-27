@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Book Marker",
+    "id": "bookmarker",
+    "image": "/images/bookmarker.png",
+    "createdAt": "03/01/2021",
+    "technologies": [
+      {
+        "name": "TailwindCSS",
+        "url": "https://tailwindcss.com/"
+      },
+      {
+        "name": "React.js",
+        "url": "https://reactjs.org/"
+      },
+      {
+        "name": "Firebase",
+        "url": "https://firebase.google.com/"
+      }
+    ],
+    "url": "https://bookmarker-ba651.web.app/login",
+    "githubURL": "https://github.com/Basheer3648734/Book-Marker"
+  },
+  {
+    "name": "Covid CLI",
+    "id": "covidCLI",
+    "image": "/images/covid_cli.png",
+    "createdAt": "08/06/2020",
+    "technologies": [
+      {
+        "name": "Node.js",
+        "url": "https://nodejs.org/en/"
+      },
+      {
+        "name": "Commander.js",
+        "url": "https://www.npmjs.com/package/commander"
+      },
+      {
+        "name": "Chalk.js",
+        "url": "https://www.npmjs.com/package/chalk"
+      }
+    ],
+    "url": null,
+    "githubURL": "https://github.com/Basheer3648734/covid19-cli"
+  },
+  {
+    "name": "OctoProfile",
+    "id": "octoProfile",
+    "image": "/images/octoprofile.png",
+    "createdAt": "27/12/2020",
+    "technologies": [
+      {
+        "name": "React.js",
+        "url": "https://reactjs.org/"
+      },
+      {
+        "name": "gh-polyglot",
+        "url": "https://www.npmjs.com/package/gh-polyglot"
+      }
+    ],
+    "url": "https://octaprofile-3f813.web.app/",
+    "githubURL": "https://github.com/Basheer3648734/Basheer-octoprofile/"
+  },
+  {
+    "name": "Save Earth",
+    "id": "saveEarth",
+    "image": "/images/save_earth.png",
+    "createdAt": "16/10/2020",
+    "technologies": [
+      {
+        "name": "React.js",
+        "url": "https://reactjs.org/"
+      },
+      {
+        "name": "GSAP",
+        "url": "https://greensock.com/gsap/"
+      },
+      {
+        "name": "Firebase",
+        "url": "https://firebase.google.com/"
+      }
+    ],
+    "url": "https://save-earth-d5618.web.app/",
+    "githubURL": "https://github.com/Basheer3648734/save-earth"
+  },
+  {
+    "name": "Google Clone",
+    "id": "googleClone",
+    "image": "/images/google_clone.png",
+    "createdAt": "27/08/2020",
+    "technologies": [
+      {
+        "name": "React.js",
+        "url": "https://reactjs.org/"
+      },
+      {
+        "name": "MaterialUI",
+        "url": "https://mui.com/"
+      }
+    ],
+    "url": "https://clone-46de8.web.app/",
+    "githubURL": "https://github.com/Basheer3648734/google-clone"
+  },
+  {
+    "name": "ExpTrack",
+    "id": "expTrack",
+    "image": "/images/expTrack.png",
+    "createdAt": "In development",
+    "technologies": [
+      {
+        "name": "Next.js",
+        "url": "https://nextjs.org/"
+      },
+      {
+        "name": "TailwindCSS",
+        "url": "https://tailwindcss.com/"
+      }
+    ],
+    "url": null,
+    "githubURL": "https://github.com/Basheer3648734/ExpTrack"
+  }
+]
