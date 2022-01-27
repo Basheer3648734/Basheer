@@ -2,6 +2,7 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 import NavBar from "../../components/NavBar";
 import ProjectCard from "../../components/ProjectCard";
+
 export default function projects({ projects }) {
   return (
     <div>
@@ -24,8 +25,8 @@ export default function projects({ projects }) {
 }
 
 export async function getStaticProps() {
-  let data = await fetch("http://localhost:3000/api/project").then((data) =>
-    data.json()
+  let data = await fetch(`${process.env.RESTURL_SESSIONS}/project`).then(
+    (data) => data.json()
   );
   return {
     props: {

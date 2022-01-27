@@ -3,8 +3,8 @@ export default function ProjectView({ project }) {
 }
 
 export async function getStaticPaths() {
-  let data = await fetch("http://localhost:3000/api/project").then((data) =>
-    data.json()
+  let data = await fetch(`${process.env.RESTURL_SESSIONS}/project`).then(
+    (data) => data.json()
   );
   const params = data.map((d) => ({
     params: {
@@ -19,9 +19,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const data = await fetch(
-    `http://localhost:3000/api/project/${params.id}`
+    `${process.env.RESTURL_SESSIONS}/project/${params.id}`
   ).then((d) => d.json());
-  console.log(data);
   return {
     props: {
       project: "hello",
