@@ -8,16 +8,16 @@ export default function ProjectCard() {
         <Image src="/images/bookmarker.png" width="300px" height="150px" />
       </div>
       <div className="px-[10px] py-[5px]">
-        <h2 className="text-[1.25rem] font-bold inline-block md:text-[1rem]">
+        <h2 className="text-[1.25rem] font-bold inline-block md:text-[1.3rem]">
           Book marker
         </h2>
         <p className="inline-block float-right text-[0.6rem] leading-5 font-medium text-[silver]">
           01/02/2022
         </p>
-        <p className="underline text-[0.78rem] decoration-solid mt-[5px] text-[gray] md:text-[0.8rem]">
+        <p className="underline text-[0.78rem] decoration-solid mt-[5px] text-[gray] md:text-[0.9rem]">
           Technologies used
         </p>
-        <ul className="my-[10px] flex text-[0.8rem] md:text-[0.8rem] justify-around">
+        <ul className="my-[10px] flex text-[0.8rem] md:text-[0.9rem] justify-around">
           <li>
             <Link href="#">
               <a className="hover:underline hover:decoration-solid">
@@ -37,7 +37,7 @@ export default function ProjectCard() {
           </li>
         </ul>
         <Link href="https://bookmarker-ba651.web.app/login">
-          <a className="text-brand font-medium text-[1rem] mb-[10px] block text-center hover:underline hover:decoration-solid md:text-[1rem]">
+          <a className="text-brand font-medium text-[1rem] mb-[10px] block text-center hover:underline hover:decoration-solid md:text-[1.2rem]">
             Visit &#8594;
           </a>
         </Link>

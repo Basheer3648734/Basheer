@@ -11,7 +11,7 @@ export default function projects() {
       </Head>
       <Layout>
         <NavBar page="projects" />
-        <div className="w-[100%] flex overflow-hidden flex-wrap justify-evenly items-center flex-1 basis-[auto]">
+        <div className="w-[100%] flex flex-wrap justify-evenly items-center flex-1 basis-[auto]">
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />

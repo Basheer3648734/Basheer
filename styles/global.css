@@ -10,6 +10,14 @@
   box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 15px;
+}
+
 h1,
 h2,
 h3,
@@ -44,6 +52,7 @@ a {
 .all_device_highlighter {
   border-bottom: 7px solid rgba(0, 255, 255, 0.363);
 }
+
 @media screen and (max-width: 640px) {
   .home {
     background-image: none;
