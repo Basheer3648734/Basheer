@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Warning } from "@material-ui/icons";
 export default function ProjectView({ project }) {
+
+
   return (
     <div className="absolute w-[100vw] bg-[#F9F9F9] overflow-y-auto z-[-20]">
       <div className=" bg-gradient-to-t from-[purple] to-[#bc87ce]  absolute top-0 left-0 w-[100vw] md:w-[40vw] h-[40vw] md:h-[100vh] z-[-10] md:block "></div>
@@ -96,8 +98,10 @@ export default function ProjectView({ project }) {
 }
 
 export async function getStaticPaths() {
+
   let data = await fetch(`${process.env.HOST}/project`).then((data) =>
     data.json()
+
   );
   const params = data.map((d) => ({
     params: {
@@ -111,9 +115,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+
   const data = await fetch(`${process.env.HOST}/project/${params.id}`).then(
     (d) => d.json()
   );
+
   return {
     props: {
       project: data,

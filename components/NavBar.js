@@ -10,10 +10,12 @@ export default function NavBar(props) {
         isNavbarModalOpen ? "h-[100vh] bg-[black] absolute" : ""
       }`}
     >
+
       {/* TO add a modal */}
       {isNavbarModalOpen ? (
         <div
           className="absolute  w-[100vw] h-[100vh] z-[-10] md:hidden"
+
           onClick={() => setNavbarModelState((prev) => !prev)}
         ></div>
       ) : (

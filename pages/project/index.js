@@ -25,8 +25,10 @@ export default function projects({ projects }) {
 }
 
 export async function getStaticProps() {
+
   let data = await fetch(`${process.env.HOST}/project`).then((data) =>
     data.json()
+
   );
   return {
     props: {
