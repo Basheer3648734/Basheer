@@ -20,15 +20,15 @@ module.exports = (phase) => {
     RESTURL_SPEAKERS: (() => {
       if (isDev) return "http://localhost:3000/api";
       if (isProd) {
-        return "https://ma-basheer.vercel.app/api/";
+        return "https://test-basheer.vercel.app/api/";
       }
-      if (isStaging) return "https://ma-basheer.vercel.app/api";
+      if (isStaging) return "https://test-basheer.vercel.app/api";
       return "RESTURL_SPEAKERS:not (isDev,isProd && !isStaging,isProd && isStaging)";
     })(),
     RESTURL_SESSIONS: (() => {
       if (isDev) return "http://localhost:3000/api";
-      if (isProd) return "https://ma-basheer.vercel.app/api/";
-      if (isStaging) return "https://ma-basheer.vercel.app/api/";
+      if (isProd) return "https://test-basheer.vercel.app/api/";
+      if (isStaging) return "https://test-basheer.vercel.app/api/";
       return "RESTURL_SESSIONS:not (isDev,isProd && !isStaging,isProd && isStaging)";
     })(),
   };
