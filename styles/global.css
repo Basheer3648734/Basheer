@@ -46,11 +46,20 @@ a {
   height: 100vh;
 }
 
-.highlighter {
-  border-bottom: 7px solid yellow;
+.highlighter,
+.about_us_highlighter,
+.projects_highlighter {
+  border-bottom-width: 7px;
+  border-style: solid;
 }
-.all_device_highlighter {
-  border-bottom: 7px solid rgba(0, 255, 255, 0.363);
+.highlighter {
+  border-color: yellow;
+}
+.about_us_highlighter {
+  border-color: rgba(0, 255, 255, 0.363);
+}
+.projects_highlighter {
+  border-color: #6867ac;
 }
 
 @media screen and (max-width: 640px) {

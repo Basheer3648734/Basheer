@@ -1,8 +1,0 @@
-[
-  {
-    "title": "Bookmarker",
-    "createdOn": "01/02/2022",
-    "technologiesUsed": ["Tailwindcss", "React.js", "Firebase"],
-    "image": "/images/bookmarker.png"
-  }
-]
