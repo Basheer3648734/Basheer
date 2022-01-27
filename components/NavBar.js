@@ -61,7 +61,7 @@ export default function NavBar(props) {
             </li>
             <hr className="bg-[gray] opacity-40 sm:hidden" />
             <li className="p-[10px]  sm:text-[black]">
-              <Link href="/projects">
+              <Link href="/project">
                 <a
                   className={`sm:px-[10px] ${
                     props.page == "projects" ? "highlighter" : ""

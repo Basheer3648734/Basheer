@@ -11,7 +11,7 @@ export default function ProjectCard({
   return (
     <div className="bg-[white] w-[auto] shadow-lg shadow-gray-500/50 inline-block mx-[30px] my-[15px]">
       <div className="w-[100%]">
-        <Image src="/images/bookmarker.png" width="300px" height="150px" />
+        <Image src={image} width="300px" height="150px" />
       </div>
       <div className="px-[10px] py-[5px]">
         <h2 className="text-[1.25rem] font-bold inline-block md:text-[1.3rem]">

@@ -1,9 +1,7 @@
 import Head from "next/head";
-import Layout from "../components/Layout";
-import NavBar from "../components/NavBar";
-import fs from "fs";
-import path from "path";
-import ProjectCard from "../components/ProjectCard";
+import Layout from "../../components/Layout";
+import NavBar from "../../components/NavBar";
+import ProjectCard from "../../components/ProjectCard";
 export default function projects({ projects }) {
   return (
     <div>
@@ -26,9 +24,9 @@ export default function projects({ projects }) {
 }
 
 export async function getStaticProps() {
-  const projectsDBFile = path.join(__dirname, "../../../data/projects.json");
-  const data = JSON.parse(fs.readFileSync(projectsDBFile));
-  console.log(data);
+  let data = await fetch("http://localhost:3000/api/project").then((data) =>
+    data.json()
+  );
   return {
     props: {
       projects: data,
