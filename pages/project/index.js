@@ -2,12 +2,12 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 import NavBar from "../../components/NavBar";
 import ProjectCard from "../../components/ProjectCard";
-
+import { getAllProjects } from "../../src/lib/projects";
 export default function projects({ projects }) {
   return (
     <div>
       <Head>
-        <title>Basheer: Projects Page</title>
+        <title>Projects Page</title>
       </Head>
       <Layout>
         <NavBar page="projects" />
@@ -25,9 +25,7 @@ export default function projects({ projects }) {
 }
 
 export async function getStaticProps() {
-  let data = await fetch(
-    `${process.env.NEXT_PUBLIC_VERCEL_URL || process.env.VERCEL_URL}/project`
-  ).then((data) => data.json());
+  let data = await getAllProjects();
   return {
     props: {
       projects: data,
