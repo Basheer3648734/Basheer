@@ -26,9 +26,9 @@ export default function ProjectView({ project }) {
 
             <section className="flex flex-col mt-[20px] justify-start  md:mt-[10rem] h-[100%] md:p-[30px] w-[100%]">
               {project.stage == "development" ? (
-                <div className="bg-warning text-[rgba(255,0,0,0.8)] flex align-center w-[100%] px-[10px] py-[5px] rounded mb-[20px]  sm:mt-[20px] md:mt-[0px]">
+                <div className="bg-warning text-warningText flex align-center w-[100%] px-[10px] py-[5px] rounded mb-[20px]  sm:mt-[20px] md:mt-[0px]">
                   <Warning />{" "}
-                  <p className="px-[10px] text-[0.8rem] md:text-[0.9rem]">
+                  <p className="px-[10px] my-[3px] text-[0.8rem] md:text-[0.9rem]">
                     This Project is under developement.
                   </p>
                 </div>
