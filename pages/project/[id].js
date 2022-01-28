@@ -96,7 +96,7 @@ export default function ProjectView({ project }) {
 }
 
 export async function getStaticPaths() {
-  let data = await fetch(`${process.env.HOST}/project`).then((data) =>
+  let data = await fetch(`${process.env.VERCEL_URL}/project`).then((data) =>
     data.json()
   );
   const params = data.map((d) => ({
@@ -111,9 +111,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await fetch(`${process.env.HOST}/project/${params.id}`).then(
-    (d) => d.json()
-  );
+  const data = await fetch(
+    `${process.env.VERCEL_URL}/project/${params.id}`
+  ).then((d) => d.json());
   return {
     props: {
       project: data,
