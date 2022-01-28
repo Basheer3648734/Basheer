@@ -1,27 +1,27 @@
-import Header from "../components/Header";
-import Link from "next/link";
-import styles from "./404.module.css";
+import NavBar from "../components/NavBar";
+import Layout from "../components/Layout";
 import Head from "next/head";
-export default function Error() {
+export default function ErrorPage() {
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <title>404 Error</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404</title>
       </Head>
-      <Header />
-      <div className={styles.error}>
-        <main>
-          <span>4</span>
-          <span>0</span>
-          <span>4</span>
-        </main>
-        <p>You came to wrong place</p>
-        <Link href="/">
-          <a className={styles.error__link}>Go back to home</a>
-        </Link>
-      </div>
+      <Layout>
+        <NavBar />
+        <div className="flex items-center justify-center h-[60vh]">
+          <div className="text-center mt-[40px]">
+            <p className="uppercase text-[0.7rem]">oops! Page not found</p>
+            <p className="text-[10rem] font-bold tracking-[-15px] leading-[18vh]">
+              404
+            </p>
+            <p className="uppercase text-[0.7rem]">
+              we are sorry, but the page you requested was
+              <br /> not found
+            </p>
+          </div>
+        </div>
+      </Layout>
     </>
   );
 }
