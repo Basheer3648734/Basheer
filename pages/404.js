@@ -12,7 +12,7 @@ export default function ErrorPage() {
         <div className="flex items-center justify-center h-[60vh]">
           <div className="text-center mt-[40px]">
             <p className="uppercase text-[0.7rem]">oops! Page not found</p>
-            <p className="text-[10rem] font-bold tracking-[-15px] leading-[18vh]">
+            <p className="text-[10rem] font-bold tracking-[-15px] leading-[150px] ">
               404
             </p>
             <p className="uppercase text-[0.7rem]">
