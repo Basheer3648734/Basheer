@@ -25,9 +25,9 @@ export default function projects({ projects }) {
 }
 
 export async function getStaticProps() {
-  let data = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/project`).then(
-    (data) => data.json()
-  );
+  let data = await fetch(
+    `${process.env.NEXT_PUBLIC_VERCEL_URL || process.env.VERCEL_URL}/project`
+  ).then((data) => data.json());
   return {
     props: {
       projects: data,
