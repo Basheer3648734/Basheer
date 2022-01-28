@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import Link from "next/link";
 import { useState } from "react";
 import { GitHub, Twitter, Facebook, Instagram } from "@material-ui/icons";
+import Head from "next/head";
 export default function Connect() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -16,6 +17,9 @@ export default function Connect() {
   };
   return (
     <div>
+      <Head>
+        <title>Connect</title>
+      </Head>
       <Layout>
         <NavBar page="connect" />
         <div className="px-[30px]">

@@ -5,7 +5,7 @@ export default function about() {
   return (
     <div className="about">
       <Head>
-        <title>Basheer: About Page</title>
+        <title>About </title>
       </Head>
       <Layout>
         <NavBar page="about" />
@@ -13,7 +13,7 @@ export default function about() {
           <div className=" font-bold text-[2rem]  p-[10px] mb-[10px] flex justify-center">
             <h1 className="about_us_highlighter">About Me 😊</h1>
           </div>
-          <p className="indent-10 text-justify leading-7 mb-[20px] selection:bg-[#f0abfc] selection:text-[#701a75] text-[0.9rem] sm:text-[1rem]">
+          <p className="indent-10 text-justify leading-7 mb-[20px] selection:bg-[#f0abfc] selection:text-[#701a75] text-[0.9rem] sm:text-[1rem] md:leading-8">
             Hey, I am Basheer. I am an undergrad at CMR college of Engineering
             and Technology and software engineer intern. I like to build
             software applications that aims at solving a particular solution.
@@ -27,7 +27,7 @@ export default function about() {
           <h2 className="text-[1.5rem] underline decoration-solid text-[#0891b2] font-bold mb-[5px] md:mt-[20px] lg:text-center">
             My 2022 Resolutions
           </h2>
-          <ul className="list-disc leading-7 mx-auto w-[90%]  lg:w-[50%]">
+          <ul className="list-disc leading-7 mx-auto w-[90%] mb-[30px] lg:w-[50%] md:leading-8">
             <li>Excel at technical skills</li>
             <li>To improve as a human being</li>
           </ul>

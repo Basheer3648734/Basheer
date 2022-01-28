@@ -7,7 +7,7 @@ export default function projects({ projects }) {
   return (
     <div>
       <Head>
-        <title>Projects Page</title>
+        <title>Projects</title>
       </Head>
       <Layout>
         <NavBar page="projects" />

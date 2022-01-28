@@ -1,8 +1,12 @@
 import NavBar from "../components/NavBar";
 import Layout from "../components/Layout";
+import Head from "next/head";
 export default function ErrorPage() {
   return (
     <>
+      <Head>
+        <title>404</title>
+      </Head>
       <Layout>
         <NavBar />
         <div className="flex items-center justify-center h-[60vh]">

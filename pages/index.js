@@ -36,7 +36,7 @@ export default function App() {
               <h2 className="font-bold text-[2rem] md:text-[2.5rem]">
                 This is Basheer
               </h2>
-              <p className="text-justify leading-6 mt-2 md:text-[1rem]">
+              <p className="text-justify leading-7 indent-8 mt-2 md:text-[1rem] md:leading-8">
                 I am an undergrad and software engineer. I like to create
                 sustainable and efficient softwares that solves human problems.
                 Apart from that I am an occasional blogger.
