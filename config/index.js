@@ -9,5 +9,6 @@ export function server() {
     return process.env.VERCEL_URL || "https://test-basheer.vercel.app";
   } else {
     return process.env.VERCEL_URL || "https://ma-basheer.vercel.app";
+
   }
 }
