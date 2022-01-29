@@ -5,6 +5,8 @@ import { useState } from "react";
 import { GitHub, Twitter, Facebook, Instagram } from "@material-ui/icons";
 import Head from "next/head";
 import { collection, addDoc } from "firebase/firestore";
+import { server } from "../config/index.js";
+
 import db from "../firebase";
 export default function Connect() {
   const [name, setName] = useState("");
@@ -35,8 +37,21 @@ export default function Connect() {
           email,
           message,
         });
-        setError(null);
-        setmessageSuccess("Message sent succesfully. Thank you.");
+        const response = await fetch(`${server()}/api/mailSender`, {
+          method: "POST",
+          body: JSON.stringify({
+            name,
+            email,
+            message,
+          }),
+        });
+        if (response.status != 200) {
+          throw new Error("unable to send mail");
+        } else if (response.status == 200) {
+          setError(null);
+          setmessageSuccess("Message sent succesfully. Thank you.");
+        }
+
       } catch (e) {
         setError("Unable to send your request. Please try later");
         setmessageSuccess(null);
