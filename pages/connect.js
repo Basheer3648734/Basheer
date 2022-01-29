@@ -11,12 +11,13 @@ export default function Connect() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [error, setError] = useState(null);
+  const [messageError, setmessageError] = useState(null);
   const [messageSuccess, setmessageSuccess] = useState(null);
+  const [messageSending, setMessageSending] = useState(false);
   const onSubmitHandler = (e) => {
     e.preventDefault();
     if (name == "" || email == "" || message == "") {
-      setError("Fields cannot be empty");
+      setmessageError("Fields cannot be empty");
       setmessageSuccess(null);
       return;
     }
@@ -25,11 +26,14 @@ export default function Connect() {
         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       )
     ) {
-      setError("Invalid Email.");
+      setmessageError("Invalid Email.");
       setmessageSuccess(null);
       return;
     }
     (async () => {
+      setMessageSending(true);
+      setmessageSuccess(null);
+      setmessageError(null);
       try {
         await addDoc(collection(db, "visitors"), {
           name,
@@ -47,12 +51,14 @@ export default function Connect() {
         if (response.status != 200) {
           throw new Error("unable to send mail");
         } else if (response.status == 200) {
-          setError(null);
+          setmessageError(null);
           setmessageSuccess("Message sent succesfully. Thank you.");
+          setMessageSending(false);
         }
       } catch (e) {
-        setError("Unable to send your request. Please try later");
+        setmessageError("Unable to send your request. Please try later");
         setmessageSuccess(null);
+        setMessageSending(false);
       }
     })();
 
@@ -72,12 +78,12 @@ export default function Connect() {
             <h1 className="text-[1.2rem] font-bold underline m-auto text-center">
               Get In Touch
             </h1>
-            {error ? (
+            {messageError ? (
               <p
                 className="text-center mt-[5px] text-[0.8rem] w-[100%]  m-auto px-[15px] py-[8px] rounded-md bg-error text-errorText md:w-[50%] md:text-[1rem]"
                 id="error"
               >
-                {error}
+                {messageError}
               </p>
             ) : (
               ""
@@ -88,6 +94,16 @@ export default function Connect() {
                 id="success"
               >
                 {messageSuccess}
+              </p>
+            ) : (
+              ""
+            )}
+            {messageSending ? (
+              <p
+                className="text-center mt-[5px] text-[0.8rem] w-[100%]  m-auto px-[15px] py-[8px] rounded-md bg-warning text-warningText md:w-[50%] md:text-[1rem]"
+                id="success"
+              >
+                Sending the message...
               </p>
             ) : (
               ""
