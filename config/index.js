@@ -6,8 +6,6 @@ export function server() {
   if (dev) {
     return "http://localhost:3000";
   } else if (prod) {
-    return "https://test-basheer.vercel.app";
-  } else {
     return "https://ma-basheer.vercel.app";
   }
 }
