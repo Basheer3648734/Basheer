@@ -55,6 +55,7 @@ export default function Connect() {
           setmessageError(null);
           setmessageSuccess("Message sent succesfully. Thank you.");
           setMessageSending(false);
+
         }
 
       } catch (e) {
