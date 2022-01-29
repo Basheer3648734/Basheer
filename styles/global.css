@@ -1,22 +1,76 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Nunito:wght@200;500;600;700;800;900&display=swap");
 * {
-  margin: 0;
-  padding: 0;
+  font-family: "Inter", sans-serif;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
-html,
-body {
-  background: #fffafb;
-  font-size: 16px;
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 15px;
 }
 
-/* @media (min-width: 992px) {
-  html {
-    font-size: 16px;
+h1,
+h2,
+h3,
+h4,
+h4,
+h6,
+a {
+  font-family: "Nunito", sans-serif;
+}
+
+.home {
+  background-image: url("/images/home_background.svg");
+  background-repeat: no-repeat;
+  width: 100vw;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left top;
+  height: 100vh;
+}
+
+.about {
+  background-image: url("/images/about_background.svg");
+  background-repeat: no-repeat;
+  width: 100vw;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.highlighter,
+.about_us_highlighter,
+.projects_highlighter {
+  border-bottom-width: 7px;
+  border-style: solid;
+}
+.highlighter {
+  border-color: yellow;
+}
+.about_us_highlighter {
+  border-color: rgba(0, 255, 255, 0.363);
+}
+.projects_highlighter {
+  border-color: #6867ac;
+}
+
+@media screen and (max-width: 640px) {
+  .home {
+    background-image: none;
+  }
+  .highlighter {
+    border: none;
+  }
+  .about {
+    background-position: 10%;
+    background-size: contain;
   }
 }
-@media (min-width: 800px) {
-  html {
-    font-size: 10px;
-  }
-} */

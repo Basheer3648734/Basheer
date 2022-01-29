@@ -1,24 +1,9 @@
-// import Layout from "../components/layout";
-import { useRef, useEffect } from "react";
-import Header from "../components/Header";
+import Layout from "../components/Layout";
+import NavBar from "../components/NavBar";
 import Head from "next/head";
-import SocialBtns from "../components/SocialBtn";
-import styles from "./index.module.css";
-import Typed from "typed.js";
-
-export default function Home() {
-  const el = useRef(null);
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["Basheer."],
-      typeSpeed: 200,
-      backSpeed: 100,
-      backDelay: 100,
-      showCursor: true,
-      startDelay: 100,
-      loop: true,
-    });
-  }, []);
+import Link from "next/link";
+import Image from "next/image";
+export default function App() {
   return (
     <>
       <Head>
@@ -40,31 +25,41 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="agektmr" />
       </Head>
-      <Header />
-      <main className={styles.home}>
-        <SocialBtns />
-        <div className={styles.home__left}>
-          <h4>Hola,</h4>
-          <h1>
-            This is{"   "}
-            <span
-              className={styles.home__leftName}
-              id="hero_name"
-              ref={el}
-            ></span>
-          </h1>
-          <p>I am a full stack javascript developer</p>
-          <a
-            href="mailto:cleverbasheer@gmail.com"
-            className={styles.home__leftChatBtn}
-          >
-            let's chat
-          </a>
-        </div>
-        <div className={styles.home__right}>
-          <img src="/images/Programming-rafiki.webp" alt="programming svg " />
-        </div>
-      </main>
+      <div className="home">
+        <Layout>
+          <NavBar page="home" />
+          <section className="flex flex-col-reverse  items-center justify-center sm:justify-between h-[80%] md:h-[60vh] sm:flex-row">
+            <div className="mt-[20px] p-[30px] sm:p-[20px] md:p-[0px] w-[100%] sm:w-[50%] md:w-[60%] mx-auto">
+              <h2 className="font-bold text-[1.5rem] md:text-[2rem]">
+                Hello 👋
+              </h2>
+              <h2 className="font-bold text-[2rem] md:text-[2.5rem]">
+                This is Basheer
+              </h2>
+              <p className="text-justify leading-7 indent-8 mt-2 md:text-[1rem] md:leading-8">
+                I am an undergrad and software engineer. I like to create
+                sustainable and efficient softwares that solves human problems.
+                Apart from that I am an occasional blogger.
+              </p>
+              <Link href="mailto:bk3648734@gmail.com">
+                <a className="inline-block bg-cyan w-[100%] hover:underline  hover:decoration-solid sm:w-auto mt-[1.5rem] px-[15px] py-[10px] text-center text-[1.2rem]">
+                  Get in touch
+                </a>
+              </Link>
+            </div>
+            <div className="sm:w-[50%] md:w-[40%] flex justify-center items-center">
+              <Image
+                priority
+                src="/images/hero_pic.webp"
+                width="200px"
+                height="200px"
+                className="rounded-full hover:grayscale md:w-[300px]"
+                alt="image of basheer"
+              />
+            </div>
+          </section>
+        </Layout>
+      </div>
     </>
   );
 }
