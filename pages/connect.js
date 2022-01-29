@@ -5,6 +5,7 @@ import { useState } from "react";
 import { GitHub, Twitter, Facebook, Instagram } from "@material-ui/icons";
 import Head from "next/head";
 import { collection, addDoc } from "firebase/firestore";
+
 import { server } from "../config/index.js";
 
 import db from "../firebase";
@@ -19,6 +20,7 @@ export default function Connect() {
     e.preventDefault();
     if (name == "" || email == "" || message == "") {
       setmessageError("Fields cannot be empty");
+
       setmessageSuccess(null);
       return;
     }
@@ -28,6 +30,7 @@ export default function Connect() {
       )
     ) {
       setmessageError("Invalid Email.");
+
       setmessageSuccess(null);
       return;
     }
@@ -35,6 +38,7 @@ export default function Connect() {
       setMessageSending(true);
       setmessageSuccess(null);
       setmessageError(null);
+
       try {
         await addDoc(collection(db, "visitors"), {
           name,
@@ -62,6 +66,7 @@ export default function Connect() {
         setmessageError("Unable to send your request. Please try later");
         setmessageSuccess(null);
         setMessageSending(false);
+
       }
     })();
 
@@ -82,11 +87,13 @@ export default function Connect() {
               Get In Touch
             </h1>
             {messageError ? (
+
               <p
                 className="text-center mt-[5px] text-[0.8rem] w-[100%]  m-auto px-[15px] py-[8px] rounded-md bg-error text-errorText md:w-[50%] md:text-[1rem]"
                 id="error"
               >
                 {messageError}
+
               </p>
             ) : (
               ""
@@ -111,6 +118,7 @@ export default function Connect() {
             ) : (
               ""
             )}
+
           </div>
           <div className="w-[100%] sm:w-[80%] md:w-[60%] lg:w-[50%] my-[20px] m-auto">
             <form onSubmit={onSubmitHandler} className="flex flex-col">
