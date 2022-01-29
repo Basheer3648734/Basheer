@@ -6,6 +6,7 @@ import { GitHub, Twitter, Facebook, Instagram } from "@material-ui/icons";
 import Head from "next/head";
 import { collection, addDoc } from "firebase/firestore";
 import { server } from "../config/index.js";
+
 import db from "../firebase";
 export default function Connect() {
   const [name, setName] = useState("");
@@ -55,6 +56,7 @@ export default function Connect() {
           setmessageSuccess("Message sent succesfully. Thank you.");
           setMessageSending(false);
         }
+
       } catch (e) {
         setmessageError("Unable to send your request. Please try later");
         setmessageSuccess(null);
