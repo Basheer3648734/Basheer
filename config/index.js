@@ -6,10 +6,9 @@ export function server() {
   if (dev) {
     return "http://localhost:3000";
   } else if (prod) {
+    return "https://test-basheer.vercel.app";
 
-    return process.env.VERCEL_URL || "https://test-basheer.vercel.app";
   } else {
-    return process.env.VERCEL_URL || "https://ma-basheer.vercel.app";
-
+    return "https://ma-basheer.vercel.app";
   }
 }
