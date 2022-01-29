@@ -5,17 +5,22 @@ import { useState } from "react";
 import { GitHub, Twitter, Facebook, Instagram } from "@material-ui/icons";
 import Head from "next/head";
 import { collection, addDoc } from "firebase/firestore";
+
+import { server } from "../config/index.js";
+
 import db from "../firebase";
 export default function Connect() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [error, setError] = useState(null);
+  const [messageError, setmessageError] = useState(null);
   const [messageSuccess, setmessageSuccess] = useState(null);
+  const [messageSending, setMessageSending] = useState(false);
   const onSubmitHandler = (e) => {
     e.preventDefault();
     if (name == "" || email == "" || message == "") {
-      setError("Fields cannot be empty");
+      setmessageError("Fields cannot be empty");
+
       setmessageSuccess(null);
       return;
     }
@@ -24,22 +29,44 @@ export default function Connect() {
         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       )
     ) {
-      setError("Invalid Email.");
+      setmessageError("Invalid Email.");
+
       setmessageSuccess(null);
       return;
     }
     (async () => {
+      setMessageSending(true);
+      setmessageSuccess(null);
+      setmessageError(null);
+
       try {
         await addDoc(collection(db, "visitors"), {
           name,
           email,
           message,
         });
-        setError(null);
-        setmessageSuccess("Message sent succesfully. Thank you.");
+        const response = await fetch(`${server()}/api/mailSender`, {
+          method: "POST",
+          body: JSON.stringify({
+            name,
+            email,
+            message,
+          }),
+        });
+        if (response.status != 200) {
+          throw new Error("unable to send mail");
+        } else if (response.status == 200) {
+          setmessageError(null);
+          setmessageSuccess("Message sent succesfully. Thank you.");
+          setMessageSending(false);
+
+        }
+
       } catch (e) {
-        setError("Unable to send your request. Please try later");
+        setmessageError("Unable to send your request. Please try later");
         setmessageSuccess(null);
+        setMessageSending(false);
+
       }
     })();
 
@@ -59,12 +86,14 @@ export default function Connect() {
             <h1 className="text-[1.2rem] font-bold underline m-auto text-center">
               Get In Touch
             </h1>
-            {error ? (
+            {messageError ? (
+
               <p
                 className="text-center mt-[5px] text-[0.8rem] w-[100%]  m-auto px-[15px] py-[8px] rounded-md bg-error text-errorText md:w-[50%] md:text-[1rem]"
                 id="error"
               >
-                {error}
+                {messageError}
+
               </p>
             ) : (
               ""
@@ -79,6 +108,17 @@ export default function Connect() {
             ) : (
               ""
             )}
+            {messageSending ? (
+              <p
+                className="text-center mt-[5px] text-[0.8rem] w-[100%]  m-auto px-[15px] py-[8px] rounded-md bg-warning text-warningText md:w-[50%] md:text-[1rem]"
+                id="success"
+              >
+                Sending the message...
+              </p>
+            ) : (
+              ""
+            )}
+
           </div>
           <div className="w-[100%] sm:w-[80%] md:w-[60%] lg:w-[50%] my-[20px] m-auto">
             <form onSubmit={onSubmitHandler} className="flex flex-col">
