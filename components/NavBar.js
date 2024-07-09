@@ -10,12 +10,10 @@ export default function NavBar(props) {
         isNavbarModalOpen ? "h-[100vh] bg-[black] absolute" : ""
       }`}
     >
-
       {/* TO add a modal */}
       {isNavbarModalOpen ? (
         <div
           className="absolute  w-[100vw] h-[100vh] z-[-10] md:hidden"
-
           onClick={() => setNavbarModelState((prev) => !prev)}
         ></div>
       ) : (
@@ -46,7 +44,7 @@ export default function NavBar(props) {
             !isNavbarModalOpen ? "hidden" : ""
           }`}
         >
-          <ul className="text-[white] sm:text-[black] flex flex-col sm:flex-row justify-around sm:flex-1 m-[10px] sm:font-[500] sm:text-gray-700 z-[10]">
+          <ul className="text-[white] sm:text-[#494443] flex flex-col sm:flex-row justify-around sm:flex-1 m-[10px] sm:font-[600] sm:text-gray-700 z-[10]">
             <li className="p-[10px]  ">
               <Link href="/">
                 <a
@@ -59,7 +57,7 @@ export default function NavBar(props) {
               </Link>
             </li>
             <hr className="bg-[gray]  opacity-40 sm:hidden" />
-            <li className="p-[10px]  sm:text-[black]">
+            <li className="p-[10px]  sm:text-[#494443]">
               <Link href="/about">
                 <a
                   className={`sm:px-[10px] ${
@@ -71,7 +69,19 @@ export default function NavBar(props) {
               </Link>
             </li>
             <hr className="bg-[gray] opacity-40 sm:hidden" />
-            <li className="p-[10px]  sm:text-[black]">
+            <li className="p-[10px]  ">
+              <Link href="/experience">
+                <a
+                  className={`sm:px-[10px] hover:text-blue-500 ${
+                    props.page == "experience" ? "highlighter" : ""
+                  }`}
+                >
+                  Experience
+                </a>
+              </Link>
+            </li>
+            <hr className="bg-[gray] opacity-40 sm:hidden" />
+            <li className="p-[10px]  sm:text-[#494443]">
               <Link href="/project">
                 <a
                   className={`sm:px-[10px] ${
@@ -83,7 +93,7 @@ export default function NavBar(props) {
               </Link>
             </li>
             <hr className="bg-[gray] opacity-40 sm:hidden" />
-            <li className="p-[10px]  sm:text-[black]">
+            <li className="p-[10px]  sm:text-[#494443]">
               <Link href="/connect">
                 <a
                   className={`sm:px-[10px] ${
@@ -94,7 +104,6 @@ export default function NavBar(props) {
                 </a>
               </Link>
             </li>
-            <hr className="bg-[gray] opacity-40 sm:hidden" />
           </ul>
         </nav>
       </header>

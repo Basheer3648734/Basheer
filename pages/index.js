@@ -28,32 +28,41 @@ export default function App() {
       <div className="home">
         <Layout>
           <NavBar page="home" />
-          <section className="flex flex-col-reverse  items-center justify-center sm:justify-between h-[80%] md:h-[60vh] sm:flex-row">
-            <div className="mt-[20px] p-[30px] sm:p-[20px] md:p-[0px] w-[100%] sm:w-[50%] md:w-[60%] mx-auto">
+          <section className="flex flex-col-reverse  items-center justify-center sm:justify-between h-[90%] md:h-[65vh] sm:flex-row">
+            <div className="mt-[36px] p-[30px] sm:p-[20px] md:p-[0px] w-[100%] sm:w-[50%] md:w-[60%] mx-auto">
               <h2 className="font-bold text-[1.5rem] md:text-[2rem]">
-                Hello 👋
+                Welcome 👋
               </h2>
               <h2 className="font-bold text-[2rem] md:text-[2.5rem]">
-                This is Basheer
+                I am Basheer
               </h2>
-              <p className="text-justify leading-7 indent-8 mt-2 md:text-[1rem] md:leading-8">
-                I am an undergrad and software engineer. I like to create
-                sustainable and efficient softwares that solves human problems.
-                Apart from that I am an occasional blogger.
+              <p className="text-justify leading-7 indent-8 mt-4 md:text-[1rem] md:leading-8 font-medium ">
+                a passionate software engineer and dedicated graduate student
+                driven by technology and continuous learning. I specialize in
+                creating practical solutions that blend the latest technology
+                with real-world applications. With a knack for creative
+                problem-solving and a strong background in software development,
+                I thrive in fast-paced, innovative environments. Let's
+                collaborate to push the boundaries of software engineering with
+                integrity and excellence. Ready to join me on this exciting
+                journey to shape the future of technology?
               </p>
               <Link href="mailto:bk3648734@gmail.com">
-                <a className="inline-block bg-cyan w-[100%] hover:underline  hover:decoration-solid sm:w-auto mt-[1.5rem] px-[15px] py-[10px] text-center text-[1.2rem]">
-                  Get in touch
+                <a className="inline-block bg-cyan w-[100%]  sm:w-auto mt-[1.5rem] px-[15px] py-[10px] text-center  rounded-md">
+                  <p className="inline-block hover:underline text-[1rem] hover:decoration-solid hover:underline-offset-2 font-medium ">
+                    Get in touch{" "}
+                  </p>{" "}
+                  🤝
                 </a>
               </Link>
             </div>
-            <div className="sm:w-[50%] md:w-[40%] flex justify-center items-center">
+            <div className="sm:w-[20%] md:w-[40%] ml-11 flex justify-center items-center">
               <Image
                 priority
                 src="/images/hero_pic.webp"
-                width="200px"
-                height="200px"
-                className="rounded-full hover:grayscale md:w-[300px]"
+                width="350rem"
+                height="350rem"
+                className="rounded-full hover:grayscale"
                 alt="image of basheer"
               />
             </div>
